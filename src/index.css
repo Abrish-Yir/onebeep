@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-canvas text-ink font-sans antialiased;
+  margin: 0;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(13, 148, 136, 0.06), transparent 42%),
+    radial-gradient(circle at 88% 8%, rgba(8, 145, 178, 0.05), transparent 40%);
+  background-attachment: fixed;
+}
+
+@keyframes heart-pulse {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.22); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.08); }
+}
+
+@keyframes ring-pulse {
+  0% { transform: scale(0.9); opacity: 0.55; }
+  70% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+@keyframes sweep {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-ring-pulse {
+  animation: ring-pulse 1.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-sweep {
+  animation: sweep 2.4s linear infinite;
+}
