@@ -1,13 +1,14 @@
 {
-  "name": "web",
+  "name": "onebeep",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
-    "lint": "eslint .",
+    "start": "node server.js",
     "preview": "vite preview",
+    "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest"
   },
